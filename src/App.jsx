@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import ProductList from './pages/ProductList';
 import ProductForm from './pages/ProductForm';
 import Layout from './components/Layout';
+import NotFound from './pages/NotFound';
 
 function ProtectedRoute({ children }) {
   const { isAuthenticated } = useAuth();
@@ -32,7 +33,7 @@ function App() {
         <Route path="productos/editar/:id" element={<ProductForm />} />
       </Route>
       
-      <Route path="*" element={<Navigate to="/" />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
