@@ -4,7 +4,6 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import ProductList from './pages/ProductList';
 import ProductForm from './pages/ProductForm';
-import NotFound from './pages/NotFound';
 import Layout from './components/Layout';
 
 function ProtectedRoute({ children }) {
@@ -33,7 +32,7 @@ function App() {
         <Route path="productos/editar/:id" element={<ProductForm />} />
       </Route>
       
-      <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }
